@@ -11,6 +11,15 @@ import {
 
 export default function App() {
   const [show, setShow] = useState(false);
+  const checkConsecuitve = (s) => {
+    let l = s.length;
+    for(let i = 1; i<l; i++){
+      if(s[i] === s[i-1]){
+        return true;
+      }
+    }
+    return false;
+  }
   //if valid
   const  valid = (item, v_icon, inv_icon) => {
     let text = document.querySelector(`#${item}`);
@@ -57,6 +66,11 @@ export default function App() {
       valid("more8", "fa-check", "fa-times");
     }else{
       invalid("more8", "fa-check", "fa-times");
+    }
+    if(checkConsecuitve(password)){
+      valid("consec", "fa-check", "fa-times");
+    }else{
+      invalid("consec", "fa-check", "fa-times");
     }
   }
   const handleShowhide = () => {
@@ -105,6 +119,11 @@ export default function App() {
           <FontAwesomeIcon className="fa-times icon" icon={faTimes} />
           <FontAwesomeIcon className="fa-check icon" icon={faCheck} />
           <span>8 or more characters</span>
+        </p>
+        <p id="consec">
+          <FontAwesomeIcon className="fa-times icon" icon={faTimes} />
+          <FontAwesomeIcon className="fa-check icon" icon={faCheck} />
+          <span>No consecutive characters</span>
         </p>
       </div>
     </div>
