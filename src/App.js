@@ -89,17 +89,17 @@ export default function App() {
         <p id="capital">
           <FontAwesomeIcon className="fa-times icon" icon={faTimes} />
           <FontAwesomeIcon className="fa-check icon" icon={faCheck} />
-          <span>capital Letters</span>
+          <span>Has an uppercase letter</span>
         </p>
         <p id="char">
           <FontAwesomeIcon className="fa-times icon" icon={faTimes} />
           <FontAwesomeIcon className="fa-check icon" icon={faCheck} />
-          <span>Special Characters</span>
+          <span>Has special characters: !@#$%^&*</span>
         </p>
         <p id="num">
           <FontAwesomeIcon className="fa-times icon" icon={faTimes} />
           <FontAwesomeIcon className="fa-check icon" icon={faCheck} />
-          <span>Use Numbers</span>
+          <span>Has a number / digit</span>
         </p>
         <p id="more8">
           <FontAwesomeIcon className="fa-times icon" icon={faTimes} />
